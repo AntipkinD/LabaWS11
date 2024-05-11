@@ -9,8 +9,12 @@
         for ( ; ; )
         {
             if (i > 6) i = 0;
-            Console.ReadLine();
+            string stop = Console.ReadLine().ToLower();
             Console.WriteLine(first?.Invoke());
+            if (stop == "s")
+            {
+                break;
+            }
         }
     }
 }
