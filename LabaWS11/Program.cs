@@ -9,7 +9,8 @@
         WeekText first = () => { if (a > 6) a = 0; string day = days[a]; a++; return day; };
         for (int i = 0; i <= 10 ; i++)
         {
-            Console.WriteLine(first?.Invoke());
+            string callday = first?.Invoke();
+            Console.WriteLine($"Текущий день: {callday}" );
         }
     }
 }
